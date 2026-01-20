@@ -1,22 +1,23 @@
 # Software Defined Network using Mininet and Ryu controller 
 A redundant ring topology consisiting of Layer 2 and Layer 3 architecture with a STP and OSPF.
 
-Controller: Ryu(OpenFlow 1.3) with STP
-Topology:
-Core: 3 Open vSwitch(OVS) connected in a Ring.
-Edge: 3 FFR Routers running OSPF.
-Hosts: 3 Hosts connected with the routers.
-Protocols:
-STP: To prevents Layer 2 loops in the ring.
-OSPF: Handles Layer 3 routing between areas.
-Visualization: FlowManager Web Dashboard.
+* **Controller:** Ryu (OpenFlow 1.3) with STP
+* **Topology:**
+  * **Core:** 3 Open vSwitch (OVS) connected in a Ring.
+  * **Edge:** 3 FFR Routers running OSPF.
+  * **Hosts:** 3 Hosts connected with the routers.
+* **Protocols:**
+  * **STP:** To prevent Layer 2 loops in the ring.
+  * **OSPF:** Handles Layer 3 routing between areas.
+* **Visualization:** FlowManager Web Dashboard.
 
-Required:
-Ubuntu / Linux VM
-Python 3
-Mininet
-Ryu SDN Framework
-FRRouting (FRR) installed on the VM
+
+**Required:**
+* Ubuntu / Linux VM
+* Python 3
+* Mininet
+* Ryu SDN Framework
+* FRRouting (FRR)
 
 Terminal 1:
 `ryu-manager simple_switch_stp_13.py flowmanager/flowmanager.py --observe-links --verbose`
