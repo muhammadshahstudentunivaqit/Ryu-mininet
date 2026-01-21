@@ -20,7 +20,9 @@ The Project implements a Hybrid A redundant ring topology consisiting of Layer 2
 * FRRouting (FRR)
 
 
-<img width="1259" height="566" alt="{3FA878D0-5190-4584-ADFC-6003C5023ED4}" src="https://github.com/user-attachments/assets/5435f5b9-87aa-43ac-a353-04c21cc159e4" />
+
+<img width="1377" height="576" alt="image" src="https://github.com/user-attachments/assets/4f731a25-0ab6-484d-bb0d-d6dd249d90c0" />
+
 
 
 Terminal 1:
