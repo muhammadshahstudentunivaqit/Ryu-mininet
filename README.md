@@ -58,6 +58,6 @@ As we can see for the S1-Eth1, the State is O, which means the link is still up.
 
 <img width="918" height="278" alt="image" src="https://github.com/user-attachments/assets/df6d125d-b74a-4429-a107-335560d94653" />
 
-As we can see that some pings gets drop while STP re-calculates and activates the redundent path and the pings resumes/routed through s1-eth2 instead of s1-eth1
+As we can see that some pings gets drop while STP re-calculates and activates the redundent path, RYU installs the flows to Switch-1 and the pings resumes/routed through s1-eth2 instead of s1-eth1
 
 <img width="1113" height="584" alt="image" src="https://github.com/user-attachments/assets/9cf11487-cdc9-49a3-a044-c76667c229b0" />
