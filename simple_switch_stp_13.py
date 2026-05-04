@@ -7,6 +7,7 @@ from ryu.lib import dpid as dpid_lib
 from ryu.lib import stplib
 from ryu.lib.packet import packet
 from ryu.lib.packet import ethernet
+from ryu.lib.packet import ether_types
 from ryu.app import simple_switch_13
 
 class SimpleSwitch13(simple_switch_13.SimpleSwitch13):
@@ -51,13 +52,17 @@ class SimpleSwitch13(simple_switch_13.SimpleSwitch13):
         pkt = packet.Packet(msg.data)
         eth = pkt.get_protocols(ethernet.ethernet)[0]
 
+        # Ignore LLDP packets to prevent broadcast storms and topology graph corruption
+        if eth.ethertype == ether_types.ETH_TYPE_LLDP:
+            return
+
         dst = eth.dst
         src = eth.src
 
         dpid = datapath.id
         self.mac_to_port.setdefault(dpid, {})
 
-        self.logger.info("packet in %s %s %s %s", dpid, src, dst, in_port)
+#       self.logger.info("packet in %s %s %s %s", dpid, src, dst, in_port)
 
         # learn a mac address to avoid FLOOD next time.
         self.mac_to_port[dpid][src] = in_port
