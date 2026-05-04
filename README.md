@@ -21,7 +21,7 @@ The Project implements a Hybrid A redundant ring topology consisiting of Layer 2
 
 
 
-<img width="1377" height="576" alt="image" src="https://github.com/user-attachments/assets/4f731a25-0ab6-484d-bb0d-d6dd249d90c0" />
+<img width="1115" height="666" alt="image" src="https://github.com/user-attachments/assets/9e87fd4c-bf20-416e-9dff-681dfe502fe8" />
 
 
 
