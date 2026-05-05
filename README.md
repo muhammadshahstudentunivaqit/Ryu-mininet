@@ -21,7 +21,7 @@ The Project implements a Hybrid A redundant ring topology consisiting of Layer 2
 
 
 
-<img width="1115" height="666" alt="image" src="https://github.com/user-attachments/assets/9e87fd4c-bf20-416e-9dff-681dfe502fe8" />
+<img width="1445" height="712" alt="image" src="https://github.com/user-attachments/assets/ee11975b-b639-47dc-88d5-64ba30e0b129" />
 
 
 
@@ -41,7 +41,7 @@ http://localhost:8080/home/index.html
 
 (In order for the routers to be visibile on the WebGUI, we need to run "pingall" command in mininet)
 
-<img width="1445" height="712" alt="image" src="https://github.com/user-attachments/assets/7d2d9e30-9c91-48a3-a072-df6dcc2eeceb" />
+<img width="1115" height="666" alt="Screenshot 2026-05-04 232928" src="https://github.com/user-attachments/assets/4ee217de-7f46-4965-bd1e-988b77646a01" />
 
 Since the RYU cannot see the host, so it is not visibile in the topology view. Instead it is shown as PC symbol.
 Which can verified by the mac address of the interface of the router.
