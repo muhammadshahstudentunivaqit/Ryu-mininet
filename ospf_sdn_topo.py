@@ -6,6 +6,7 @@ from mininet.net import Mininet
 from mininet.node import Node, OVSKernelSwitch, RemoteController
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
+from mininet.link import TCLink
 import time
 
 class LinuxRouter(Node):
@@ -23,7 +24,7 @@ class LinuxRouter(Node):
 def run():
     # 1. Initialize Mininet
     # We requested private directories for FRR to ensure isolation
-    net = Mininet(controller=RemoteController, switch=OVSKernelSwitch)
+    net = Mininet(controller=RemoteController, switch=OVSKernelSwitch, link=TCLink)
 
     # Add the Ryu Controller
     c0 = net.addController('c0', controller=RemoteController, ip='127.0.0.1', port=6633)
@@ -58,9 +59,9 @@ def run():
     net.addLink(r3, s3, intfName1='r3-eth0')
 
     # Hosts to Routers
-    net.addLink(h1, r1, intfName2='r1-eth1')
-    net.addLink(h2, r2, intfName2='r2-eth1')
-    net.addLink(h3, r3, intfName2='r3-eth1')
+    net.addLink(h1, r1, intfName2='r1-eth1', bw=10)
+    net.addLink(h2, r2, intfName2='r2-eth1', bw=10)
+    net.addLink(h3, r3, intfName2='r3-eth1', bw=10)
 
     info( '*** Starting Network\n' )
     net.start()
